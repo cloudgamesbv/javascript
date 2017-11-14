@@ -814,6 +814,7 @@ Other Style Guides
   - [7.12](#functions--mutate-params) Never mutate parameters. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign.html)
 
     > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+    An exception exists for one line functions.
 
     ```javascript
     // bad
@@ -825,6 +826,10 @@ Other Style Guides
     function f2(obj) {
       const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
     }
+
+    // exception, good
+    // eslint-disable-next-line no-param-reassign
+    this.gameObject.forEach((pGameObject) => { pGameObject.y += 20; });
     ```
 
   <a name="functions--reassign-params"></a><a name="7.13"></a>
@@ -2290,6 +2295,26 @@ Other Style Guides
       }
     }
     ```
+     <a name="comments--javadoc"></a><a name="17.6"></a>
+      - [18.7](#comments--javadoc) Use javadoc styled comments for functions.
+
+    ```javascript
+     // bad
+     // This function adds the example variable to 10 and returns this value.
+     function exampleFunction(pExampleVariable) {
+       return 10 + pExampleVariable;
+     };
+
+    // good
+    /**
+     * This is an example function
+     * @param pExampleVariable An example variable that has to be supplied
+     * @return {Number} Returns 10
+     */
+    function exampleFunction(pExampleVariable) {
+      return 10 + pExampleVariable;
+    };
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -3073,6 +3098,19 @@ Other Style Guides
       // ...
     ];
     ```
+
+    <a name="naming--Abbreviations"></a>
+      - [23.10](#naming--Abbreviations) Abbreviations should never be used in naming.
+
+      > Why? Names are for readability, not to appease a computer algorithm.
+
+      ```javascript
+      // bad
+      const obj = new ExObj();
+
+      // good
+      const object = new ExampleObject();
+      ```
 
 **[⬆ back to top](#table-of-contents)**
 
