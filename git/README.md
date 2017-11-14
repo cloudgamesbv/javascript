@@ -245,7 +245,6 @@ holds true that you should apply all of the above *before* pushing it.
 
       # good
       fix-rotation-error
-      ```
 
 * Indicate a branch name with its function. E.g. `fix-`, `feature-`, ...
 

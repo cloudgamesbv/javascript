@@ -815,6 +815,8 @@ Other Style Guides
 
     > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
     An exception exists for one line functions.
+    
+    An exception exists for one line functions. 
 
     ```javascript
     // bad
@@ -913,6 +915,27 @@ Other Style Guides
       baz,
     );
     ```
+    <a name="functions--parameter-naming"></a>
+      - [7.15](#functions--parameter-naming) Function parameters should start with a p followed by the parameter name.
+      
+      ```javascript
+          // bad
+          function foo(bar) {
+            // ...
+          }
+      
+          // still bad
+          function foo(pbar) {
+            // ..
+          }
+      
+          // good
+          function foo(pBar) {
+            // ...
+          }
+          ```
+
+    
 
 **[⬆ back to top](#table-of-contents)**
 
