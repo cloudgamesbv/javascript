@@ -916,7 +916,7 @@ Other Style Guides
     );
     ```
     <a name="functions--parameter-naming"></a>
-      - [7.15](#functions--parameter-naming) Function parameters should start with a p followed by the parameter name.
+      - [7.16](#functions--parameter-naming) Function parameters should start with a p followed by the parameter name.
       
       ```javascript
           // bad
